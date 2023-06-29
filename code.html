@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Name: A coding challenge by Daniel Arreola</title>
+    <title>Link Metrics - The Code</title>
   <!-- Google Font-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,13 +25,15 @@
 <link rel="stylesheet" href="/css/main.css">
 <!-- Prism CSS -->
 <link rel="stylesheet" href="/css/prism.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="/img/LogoNoMargin.png" type="image/x-icon" />
 </head>
 <body>
 <header>
    <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
        <div class="container" >
            <a class="navbar-brand" href="/index.html">
-            <img src="/img/LogoNoMargin.png" alt="" height="50">
+            <img src="/img/LogoNoMargin.png" alt="" height="65">
            </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -50,14 +52,14 @@
                        <a class="nav-link active" href="/code.html">Code</a>
                    </li>
                    <li class="nav-item">
-                       <a class="nav-link" href="#" target="_blank">Repo</a>
+                       <a class="nav-link" href="https://github.com/arreodan/event-planner" target="_blank">Repo</a>
                    </li>
                    <li class="nav-item">
-                       <a class="nav-link" href="https://danielarreola.netlify.app" target="_blank">Portfolio</a>
+                       <a class="nav-link" href="https://danielarreola.dev" target="_blank">Portfolio</a>
                    </li>
                    <li class="nav-item">
                     <!-- Link blog when I have one -->
-                       <a class="nav-link" href="#">Blog</a> 
+                       <a target="_blank" class="nav-link" href="https://blogdanielarreola-production.up.railway.app/">Blog</a> 
                    </li>
                 </ul>
            </div>
@@ -300,31 +302,33 @@ function saveNewEvent(){
               <li>saveNewEvent</li>
             </ul>
             </h5>
-            <p>The first function, <strong>buildDropDown</strong>, retrieves the objects from the events variable from the top, it then gets the cities from each event using map and an arrow function and converts them into a set. That set is then converted into an array with a spread and keeps unique cities to use in the dropdown. It then uses getElementById to select our HTML template, importNode copies that selected template, and using querySelector it tells it what HTML tag to target. Using appendChild we push it to the bottom of the list of events. A for loop then iterates through the distinct cities, adding them to a list and creating the dropdown with unique cities.</p>
-            <p>The next function, <strong>displayEventData</strong>, gets the table where the rows will go into and the templates for the rows. It then uses a for loop that goes through every event and fills out the table row using querySelector and dot notation to retrieve the event's name, city, state, attendance, and date.Then, it uses appendChild to add the table row to the table and restarts the loop until all the events are displayed.</p>
-            <p>After</p>
+            <p><strong>buildDropDown</strong> retrieves the objects from the events variable from the top, it then gets the cities from each event using map and an arrow function and converts them into a set. That set is then converted into an array with a spread and keeps unique cities to use in the dropdown. It then uses getElementById to select our HTML template, importNode copies that selected template, and using querySelector it tells it what HTML tag to target. Using appendChild we push it to the bottom of the list of events. A for loop then iterates through the distinct cities, adding them to a list and creating the dropdown with unique cities.</p>
+            <p><strong>displayEventData</strong> gets the table where the rows will go into and the templates for the rows. It then uses a for loop that goes through every event and fills out the table row using querySelector and dot notation to retrieve the event's name, city, state, attendance, and date.Then, it uses appendChild to add the table row to the table and restarts the loop until all the events are displayed.</p>
+            <p><strong>calculateStats</strong> This function calculates statistics based on the currentEvents array. It iterates through the events, calculating the total attendance, finding the highest and lowest attendance, and finally computing the average attendance. The function returns an object containing the calculated statistics</p>
+            <p><strong>displayStats</strong> This function displays the calculated statistics on the webpage. It retrieves the statistics object from the calculateStats function and updates the corresponding HTML elements with the calculated values.</p>
+            <p><strong>getEventData</strong>This function retrieves event data from local storage. If the data is not present in local storage, it initializes it with the events array. It returns the event data either from local storage or the events array.</p>
+            <p><strong>viewFilteredEvents</strong> This function is triggered when a dropdown item is selected. It filters the events based on the selected city and displays the filtered events and corresponding statistics. If "All" is selected, it displays all events.</p>
+            <p><strong>saveNewEvent</strong>This function saves a new event to the events array and updates the data in local storage. It retrieves the input values from the form fields, creates a new event object, adds it to the events array, and saves the updated array in local storage. It then triggers the buildDropDown function to update the dropdown menu.</p>
         </div>
     </div>
 </main>
 
-<footer class="">
+<footer>
 <div class="container py-4">
     <div class="row row-cols-1 row-cols-lg-3 align-items-center g-3">
         <div class="col text-center text-lg-start">
             &copy; 2023 Daniel Arreola
         </div>
         <div class="col text-center">
-            <img src="/img/LogoWTextnomargin.png" alt="" height="60">
+            <img src="/img/LogoWTextnomargin.png" alt="" height="65">
         </div>
         <div class="col text-center text-lg-end">
-            <a href="" target="_blank"><i class="bi bi-linkedin socialicons"></i></a>
-            <a href="" target="_blank"><i class="bi bi-github socialicons"></i></a>
-            <a href="" target="_blank"><i class="bi bi-file-earmark-person socialicons"></i></a>
+            <a href="https://www.linkedin.com/in/arreoda/" target="_blank"><i class="bi bi-linkedin socialicons"></i></a>
+            <a href="https://github.com/arreodan" target="_blank"><i class="bi bi-github socialicons"></i></a>
+            <a href="https://danielarreola.dev" target="_blank"><i class="bi bi-file-earmark-person socialicons"></i></a>
         </div>
     </div>
 </div>
-
-
 </footer>
 
 <!-- Bootstrap JS -->
